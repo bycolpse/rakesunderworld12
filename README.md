@@ -1,0 +1,1 @@
+Before entering, assign the Dynamite option and the anoying keybind option to a key that you will never use because I installed this mode forgetting that it was a troll mode and I could not get it back. After finishing the map, you can make yourself an op and look at the map, it is already a map made for fun.
