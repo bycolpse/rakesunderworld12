@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'VT323', monospace;
+  text-align: center;
+  overflow-x: hidden; /* Geniş ekranlar için sayfa taşmasını engelle */
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Sayfa ortasında */
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #0f0;
+}
+
+.description {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.map-summary {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 250px;
+  border: 4px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 18px;
+  color: #0f0;
+  opacity: 0.8;
+}
+
+.creepy-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  color: #00ff00;
+  white-space: nowrap;
+  animation: scrollCreep 8s linear infinite;
+}
+
+@keyframes scrollCreep {
+  0% {
+    transform: translateX(-100%) translateY(0);
+  }
+  100% {
+    transform: translateX(100vw) translateY(100vh);
+  }
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid #00ff00;
+  box-shadow: 0 0 20px #00ff00;
+  image-rendering: pixelated;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Arka Plan Videosu */
+#background-video {
+  position: fixed; /* Sabit pozisyon */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ekranın tamamını kaplasın */
+  height: 100%; /* Ekranın tamamını kaplasın */
+  object-fit: cover; /* Video, ekran boyutuna uygun şekilde kırpılmadan yerleştirilsin */
+  z-index: -1; /* Video, içeriklerin arkasında kalsın */
+  opacity: 0.6; /* Biraz opaklık ekleyebiliriz ki içerik daha net görünsün */
+}
+
+/* Psychological Horror Text */
+.psychological-horror-description {
+  font-size: 20px;
+  color: #00ff00;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Download Button Style */
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #00ff00;
+  color: #000;
+  font-size: 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 40px; /* Buton ile fotoğraflar arasında boşluk */
+}
+
+.download-button:hover {
+  background-color: #009900;
+  transform: scale(1.05);
+}
+
+.download-button:active {
+  background-color: #006600;
+}
+
+/* Download Button Style */
+.download-section a {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #009900; /* Yeşil kutu */
+  color: #000; /* Siyah yazı */
+  font-size: 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 40px; /* Buton ile fotoğraflar arasında boşluk */
+}
+
+.download-section a:hover {
+  background-color: #006600; /* Hover efektinde daha koyu yeşil */
+  transform: scale(1.05);
+}
+
+.download-section a:active {
+  background-color: #004d00;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid #00ff00;
+  box-shadow: 0 0 20px #00ff00;
+  image-rendering: pixelated;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.contributors {
+  margin-top: 60px;
+  padding: 25px;
+  background-color: rgba(10, 10, 10, 0.85);
+  border-top: 2px solid #00ffcc;
+  color: #00ffcc;
+  font-size: 17px;
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px #00ffcc;
+  border-radius: 10px;
+  line-height: 1.6;
+  font-family: 'VT323', monospace;
+}
+
+.contributors h3 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+
